@@ -1,0 +1,25 @@
+@use "hero";
+@use "event";
+@use "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Robot", sans-serif;
+  color: variables.$textColor;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: variables.$screenTablet) {
+    max-width: 90%;
+  }
+
+  @media (max-width: variables.$screenMobile) {
+    max-width: 80%;
+  }
+}

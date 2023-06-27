@@ -1,0 +1,63 @@
+@use "variables";
+
+.hero {
+  padding-top: 90px;
+  height: 561px;
+  background-image: url(../images/fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .container {
+    position: relative;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$backColor;
+    content: "";
+    opacity: 0.7;
+  }
+
+  &__logo {
+    margin: 12 auto;
+    height: 60px;
+    display: block;
+  }
+
+  &__text {
+    margin-top: 90px;
+    //margin-bottom: 90px;
+    color: variables.$textColor;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  @media (max-width: variables.$screenTablet) {
+    &__logo {
+      height: 48px;
+    }
+
+    &__text {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: variables.$screenMobile) {
+    padding-top: 40px 0;
+    &__logo {
+      height: 32px;
+    }
+
+    &__text {
+      font-size: 28px;
+      margin: 24px 8px;
+    }
+  }
+}
